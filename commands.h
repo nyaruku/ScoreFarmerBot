@@ -79,6 +79,10 @@ dpp::embed about(std::string bot_pfp) {
 			"Discord: <@302807502247165953>\nosu! Profile: <https://osu.ppy.sh/users/13817114>"
 		).
 		add_field(
+			"**Repository**",
+			"<https://github.com/nyaruku/ScoreFarmerBot>"
+		).
+		add_field(
 			"**Launguage**",
 			"Everything in C++"
 		).
