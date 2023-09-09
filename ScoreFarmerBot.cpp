@@ -521,7 +521,7 @@ int main() {
 				int currentWeek = (utcTime->tm_yday + 1) / 7 + 1; // Assuming weeks start from 1
 
 				//return bot.message_create(dpp::message(event.msg.channel_id, dump_compare("Top Farmers Week " + std::to_string(currentWeek) + " of " + std::to_string(utcTime->tm_year + 1900))));
-				return bot.message_create(dpp::message(event.msg.channel_id, dump_compare("Top Farmers Week " + std::to_string(weekCount) + " of " + std::to_string(currentYear_old))));
+				return bot.message_create(dpp::message(event.msg.channel_id, dump_compare_weekly("Top Farmers Week " + std::to_string(weekCount) + " of " + std::to_string(currentYear_old))));
 			}
 			if (content == prefix + "daily_all") {
 				// Get the current time in UTC
@@ -543,7 +543,7 @@ int main() {
 			//	dpp::message msg(event.msg.channel_id, "Top Farmers Week " + std::to_string(weekCount) + " of " + std::to_string(utcTime->tm_year + 1900));
 				dpp::message msg(event.msg.channel_id, "Top Farmers Week " + std::to_string(weekCount) + " of " + std::to_string(currentYear_old));
 				//	msg.add_file("weekly.txt", dump_compare_all("Top Farmers Week " + std::to_string(weekCount) + " of " + std::to_string(utcTime->tm_year + 1900)));
-				msg.add_file("weekly.txt", dump_compare_all("Top Farmers Week " + std::to_string(weekCount) + " of " + std::to_string(currentYear_old)));
+				msg.add_file("weekly.txt", dump_compare_all_weekly("Top Farmers Week " + std::to_string(weekCount) + " of " + std::to_string(currentYear_old)));
 				return bot.message_create(msg);
 			}
 			if (content == prefix + "when_daily") {

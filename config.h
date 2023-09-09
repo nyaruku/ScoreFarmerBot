@@ -11,5 +11,5 @@ static std::string owner_profile_id = "13817114"; // osu! user id of owner
 static std::string owner_discord_id = "302807502247165953"; // discord user id of owner 
 static std::string logging_channel_id = secret_logging_channel_id;
 static std::string log_file = "data/log.ansi"; // path to log file
-static std::string bot_version = "v.1.5";
+static std::string bot_version = "v.1.5.fix";
 static bool production = true; // only true in Production
